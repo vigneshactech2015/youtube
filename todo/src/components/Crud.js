@@ -1,10 +1,10 @@
 import {useState,useEffect} from "react";
 import useCrud from "../hooks/useCrud";
+import './crud.css';
 
 
 const Crud = () => {
     const {data,createItem,deleteHandler,getItems} = useCrud()
-
     const[name,setName] = useState("")
 
     // it will be run only at the mounting stage of component
@@ -12,19 +12,17 @@ const Crud = () => {
         getItems()
     },[])
 
-    
-    
     return(
-        <div>
+        <div className="todocontainer">
         <form onSubmit={(e)=>createItem(e,name)}>
-        <input type="text" onChange={(e)=>setName(e.target.value)} placeholder="Enter todo item"/> &nbsp;
-        <button type="submit">Submit</button><br/><br/>
+        <input className="todoinput" type="text" onChange={(e)=>setName(e.target.value)} placeholder="Enter todo item"/> &nbsp;
+        <button className="submitbutton" type="submit">Submit</button><br/><br/>
         </form>
         { data.length>=1 && data.map((todos)=>{
             return (
-                <div style={{display:"flex",gap:"10%",marginLeft:"40%"}}>
+                <div className="todoitemcontainer">
                 <p>{todos.name}</p>
-                <button onClick={(e)=>deleteHandler(e,todos)}>Delete</button>
+                <button className="deletebutton" onClick={(e)=>deleteHandler(e,todos)}><b>X</b></button>
                 </div>
             )
         })}

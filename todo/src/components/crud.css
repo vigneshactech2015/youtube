@@ -1,0 +1,59 @@
+
+.todoinput{
+    height:50px;
+    width:400px;
+    border-radius: 10px;
+}
+
+.todoitemcontainer{
+    display:flex;
+    padding:3%;
+    width:410px;
+    border-radius: 20px;
+    background-color: blueviolet;
+    justify-content: space-between;
+    margin-top: 2%;
+    color:white;
+}
+
+
+
+.todocontainer{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitbutton{
+    height:50px;
+    width:100px;
+    border-radius:10px;
+    cursor: pointer;
+    background-color: green;
+    color:white
+}
+
+.deletebutton{
+    background-color: brown;
+    color:white;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width:450px){
+   
+    .todoinput{
+         width:auto;
+    }
+    .todoitemcontainer{
+        width:auto;
+    }
+}
