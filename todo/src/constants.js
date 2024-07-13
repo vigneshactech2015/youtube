@@ -1,0 +1,1 @@
+export const url = 'https://669205bb26c2a69f6e9148f9.mockapi.io/todos'
