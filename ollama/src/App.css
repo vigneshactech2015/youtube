@@ -1,0 +1,31 @@
+.header{
+  text-align: center;
+}
+
+.inputbox{
+  width:400px;
+  height:40px;
+  border-radius: 20px;
+  margin-left: 30%;
+}
+
+.langchain-container{
+  padding-left: 5%;
+}
+
+button{
+  height:40px;
+  width:auto;
+  background-color: green;
+  color:white;
+  border-radius: 10px;
+  margin-left: 1%;
+}
+
+.response {
+  width:80%;
+  min-height:50px;
+  background-color:black;
+  color:white;
+  font-size: 20px;
+}
